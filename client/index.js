@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App.jsx"
+// import App from "./components/App.jsx"
+import Root from "./Root"
 //remove warnings from console.
 import { createRoot } from 'react-dom/client'
 
 
 const root = createRoot(document.getElementById("root"));
 
-root.render(React.createElement(App));
+root.render(React.createElement(Root));

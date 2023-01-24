@@ -1,13 +1,95 @@
+#appt {
+    width: 90%;
+    display: grid;
+    grid-gap: 5%;
+    /* grid-template-columns: repeat(6, 100px); */
+    grid-auto-flow: column;
+    background-color: hsla(0, 0%, 58%, 0.456);
+    padding: 2%;
+    border-radius: 25px;
+    margin: 2%;
+}
+
+.appt {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    width: 100%;
+}
+
+.appt-body {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0%;
+}
+
 body {
     background-color: rgb(167, 111, 219);
     margin: 0;
 }
 
+#btn {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 18px;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#btn:hover {
+  box-shadow: rgba(5, 11, 93, 0.2) 0 2px 8px;
+  opacity: .85;
+}
+
+#btn:active {
+  outline: 0;
+}
+
+#btn:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+  #btn {
+    height: 48px;
+  }
+}
+
+
 .close {
-    color: #aaaaaa;
+    color: #dbdbdb;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin: 20px;
 }
 
 .close:hover,
@@ -22,11 +104,77 @@ h1 {
     margin: none;
 }
 
+h2 {
+    background-color: rgba(183, 127, 213, 0);
+    font-size: 55px;
+    text-shadow: 5px 5px 10px black;
+    text-align: center;;
+    margin: 3% 35% ;
+    z-index: 3;
+}
+
+h3 {
+    font-size: 75%;
+}
+
+h4 {
+    font-size: 70%;
+
+}
+
+h5 {
+    font-size: 65%;
+    color:red
+}
+
+h6 {
+    font-size: 40%;
+}
+
+.link {
+    color: #808080;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+.link:active {
+	color: #8a07c7;
+}
+
+.link:hover {
+    color: rgb(202, 44, 210);
+    opacity: .85;
+  }
+
+.menu {
+    display: flex;
+align-items: center;
+margin-right: -24px;
+/* @media screen and (max-width: 768px) {
+	display: none;
+} */
+}
+
+.form {
+    padding: 5%;
+    background-color: #888;
+}
+
+.form-div {
+    margin: 3% 1%;
+
+}
+
 .modal-content {
-    background-color: #fefefe;
+    background-color: #34313190;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 5px;
     width: 80%;
 }
 
@@ -52,14 +200,107 @@ h1 {
     align-content: center;
     background-color: rgb(71, 26, 78);
     border: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    position:sticky;
+    height: 85px;
     justify-content: space-between;
     margin: 0;
-    padding: 1em;
+    padding-left: 20%;
+    z-index: 12;
 }
 
 .salon {
     padding: 1em;
     text-align: center;
 }
+
+.styles {
+  align-content: center;
+  justify-self: center;
+    width: 80%;
+    background-color: hsla(0, 0%, 58%, 0.456);
+    padding: 2%;
+    border-radius: 25px;
+    margin-left: 10%;
+}
+
+.style {
+    background-color: rgba(68, 68, 68, 0.727);
+    box-shadow: 20px 20px 50px 15px rgb(64, 51, 51);
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5%;
+    font-size: 150%;
+}
+
+#root {
+  width: 100%;
+}
+
+.next {
+  background-color: rgba(255, 253, 253, 0.536);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=number] {
+    width: 94%;
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  path::before {
+    --fa-primary-color: orange;
+  }
+  /* .fa-edit:before, .fa-pen-to-square:before {
+    --fa-style-family: "Font Awesome 6 Pro";
+    --fa-style: 400;
+    --fa-border-color: red;
+    --fa-primary-color: green;
+    --fa-secondary-color: red;
+  } */

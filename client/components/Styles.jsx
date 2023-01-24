@@ -3,15 +3,18 @@ import React from 'react';
 const Styles = ({ hairstyles }) => {
     
   return (
-    <div>
-        <h2>Menu</h2>
+    <>
+    <h2>Menu</h2>
+    <div className='styles'>
+        
       {hairstyles.map((style) => 
       <div key={style.id} className="style" >
-        <h3>{style.name} <b>${style.price}</b></h3>
+        <p>{style.name} <b>${style.price}</b></p>
         
         <p>{style.description}</p>
       </div>)}
     </div>
+    </>
   );
 }
 

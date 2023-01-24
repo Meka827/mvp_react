@@ -27,32 +27,32 @@ const FormContainer = (
 
     return (
 
-    <div>
+    <div className='form' >
             <form id='input' >
-    <div>
-        <label htmlFor="">style drop down</label>
+    <div className='form-div' >
+        <label htmlFor="">Hair Services</label>
         <select onChange={serviceChange} id="selected-hairstyle" name="selected-hairstyle">
-            {hairstyles.map((hairstyle) => <option key={hairstyle.id} value={hairstyle.name}>{hairstyle.name}</option>)}
-            <option selected>Please Select One</option>
+            {hairstyles.map((hairstyle) => <option key={hairstyle.id} value={[hairstyle.id, hairstyle.name]}>{hairstyle.name}</option>)}
+            <option defaultValue="null" >Please Select One</option>
         </select>
     </div>
-    <div>
-     <label htmlFor="">are you providing hair?</label>
+    <div className='form-div' >
+     <label htmlFor="">Are You Bringing Your Own Hair?</label>
         <select onChange={optionChange} id="selected-option" name="selected-option" defaultValue="not sure">
-            <option selected value="not sure">not sure</option>
+            <option defaultValue="null" >Not Sure</option>
             <option value={true}>yes</option>
             <option value={false} >no</option>
         </select>
     </div>
-    <div>
+    <div className='form-div' >
         <label htmlFor="">Add A note for your stylist</label>
         <input id='description' onChange={descriptionChange} name="description" type="text" />
     </div>
-    <div>
+    <div className='form-div' >
         <label htmlFor="">Your name</label>
         <input onChange={clientChange} id="client" name="name" type="text" />
     </div>
-    <div>
+    <div className='form-div' >
         <label htmlFor="">Phone Number</label>
         <input onChange={numberChange} type="number" name="phone-number" required id="phone-number" maxLength="8" />
     </div>
